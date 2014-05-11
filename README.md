@@ -29,11 +29,17 @@ Ch 9 Geospatial
 ===============
 
 `index [[:coordinates, Mongo::GEO2D]]`
+
 `rake db:mongoid:create_indexes`
+
 `Address.near(coordinates: [10.12, -87.565])` => box search, nearest 100 object no distance defined
+
 `Address.near(coordinates: [10.12, -87.565], max_distance: 1)`
 
 gem install mongoid_spacial
+
 `spacial_index :coordinates`
+
 `Address.geo_near([10.12, -87.565], max_distance: 1)` => 1 radiant around
+
 `Address.geo_near([10.12, -87.565], max_distance: 1, spherical: true)`
